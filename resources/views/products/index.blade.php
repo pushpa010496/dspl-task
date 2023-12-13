@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container mt-3">
@@ -16,6 +18,7 @@
       Create Product Ajax
       </button>
     </div>
+
  @if(Session::has('success'))
 <p class="alert alert-success">{{ Session::get('success') }}</p>
 @endif
@@ -29,6 +32,9 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
       Create Product
       </button>
+    </div>
+<div class="container mt-3">
+    <a href="{{route('logout')}}">Logout</a>
     </div>
 
 <div class="container">
@@ -79,6 +85,8 @@
     </div>
   </div>
   <!-- End Delete Modal -->
+
+  
 
 <script>
 $('#addProductForm').submit(function (e) {
